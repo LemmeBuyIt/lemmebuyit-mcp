@@ -1,0 +1,29 @@
+{
+  "name": "lemmebuyit",
+  "displayName": "LemMeBuyIt",
+  "version": "1.0.0",
+  "description": "Search live product catalogs across 103 US retailers, compare prices, look up stock, and pull price history via LemMeBuyIt's hosted MCP server.",
+  "author": {
+    "name": "LemMeBuyIt",
+    "email": "admin@lemmebuyit.com"
+  },
+  "publisher": "LemMeBuyIt",
+  "homepage": "https://www.lemmebuyit.com",
+  "repository": "https://github.com/LemmeBuyIt/lemmebuyit-mcp",
+  "license": "MIT",
+  "logo": "assets/logo.png",
+  "keywords": [
+    "lemmebuyit",
+    "mcp",
+    "retail",
+    "product-search",
+    "price-history"
+  ],
+  "category": "integrations",
+  "tags": [
+    "lemmebuyit",
+    "mcp",
+    "shopping"
+  ],
+  "mcpServers": "./mcp.json"
+}
