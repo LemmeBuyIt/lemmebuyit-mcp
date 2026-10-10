@@ -1,0 +1,30 @@
+{
+  "name": "lemmebuyit",
+  "displayName": "LemMeBuyIt",
+  "version": "1.1.0",
+  "description": "Search live US retailer catalogs, compare prices, check stock, find promotions, pull price history, and rank resale flips through LemMeBuyIt's hosted MCP.",
+  "author": {
+    "name": "LemMeBuyIt",
+    "email": "admin@lemmebuyit.com",
+    "url": "https://www.lemmebuyit.com"
+  },
+  "homepage": "https://www.lemmebuyit.com",
+  "repository": "https://github.com/LemmeBuyIt/lemmebuyit-mcp",
+  "license": "MIT",
+  "logo": "assets/logo.png",
+  "keywords": [
+    "lemmebuyit",
+    "mcp",
+    "retail",
+    "product-search",
+    "price-history",
+    "promotions",
+    "resale"
+  ],
+  "category": "integrations",
+  "tags": [
+    "lemmebuyit",
+    "mcp",
+    "shopping"
+  ]
+}

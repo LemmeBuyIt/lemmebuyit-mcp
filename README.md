@@ -1,8 +1,10 @@
 # LemMeBuyIt MCP
 
-Hosted [Model Context Protocol](https://modelcontextprotocol.io) plugin for Grok, Cursor, Claude, and other MCP clients. Search live product catalogs across 103 US retailers, compare prices, look up stock, and pull price history.
+Hosted [Model Context Protocol](https://modelcontextprotocol.io) plugin for Cursor, Grok, Claude, and other MCP clients. Search live US retailer catalogs, compare prices, check stock, find promotions, pull price history, and rank resale flips.
 
 This repository is the public plugin package. The server runs at `mcp.lemmebuyit.com`. There is no local server process and no secrets in this repo.
+
+Cursor Directory and the xAI plugin marketplace both read this repo. Directory refresh uses the default branch. The xAI catalog pins a commit SHA. Ship listing updates by merging here first, then refreshing the directory or bumping that SHA.
 
 - **MCP endpoint:** `https://mcp.lemmebuyit.com/mcp` (Streamable HTTP)
 - **Auth:** OAuth 2.1 + PKCE (client-managed). Optional `x-api-key` for clients that cannot do OAuth — get a free key at [lemmebuyit.com](https://www.lemmebuyit.com).
@@ -12,14 +14,17 @@ This repository is the public plugin package. The server runs at `mcp.lemmebuyit
 
 ## What it does
 
-- Search product catalogs across 103 US retailers
+- Search live product catalogs. Call `list_retailers` for the current set. The count changes as stores are added.
 - Look up a product by SKU, GTIN/UPC, brand, or category
 - Live price, stock, and rating fields on search and product detail
+- Current promotions, coupons, and sales
+- Ranked resale flips (ROI after fees). These are paper estimates. Confirm live before buying.
 - Weekly price history and Amazon ASIN / Buy Box history (paid plans)
+- Amazon listing eligibility for the connected seller account (paid plans)
 
 ## Tools
 
-Seven read-only tools. No writes, no checkout, no destructive operations.
+Eleven tools. No checkout and no retailer writes. `check_skill_run` reserves one skill run against the plan limit.
 
 | Tool | Description |
 |------|-------------|
@@ -28,8 +33,12 @@ Seven read-only tools. No writes, no checkout, no destructive operations.
 | `get_retailer_categories` | Category tree for one retailer |
 | `search_retailer_products` | Search a retailer by text or barcode, with price and stock filters |
 | `get_retailer_product` | Full details for a specific product |
+| `search_promotions` | Current coupons, sales, and deals |
+| `find_flips` | Ranked resale candidates by ROI after fees |
 | `get_product_price_history` | Weekly retailer price history (paid) |
 | `get_amazon_asin_price_history` | Weekly Amazon price history by ASIN (paid) |
+| `check_listing_eligibility` | Whether the connected Amazon seller account can list each ASIN (paid) |
+| `check_skill_run` | Reserve one run of a packaged LemMeBuyIt skill |
 
 ## Install
 

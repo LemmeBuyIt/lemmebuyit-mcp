@@ -2,7 +2,8 @@
   "mcpServers": {
     "lemmebuyit": {
       "type": "http",
-      "url": "https://mcp.lemmebuyit.com/mcp"
+      "url": "https://mcp.lemmebuyit.com/mcp",
+      "note": "Hosted LemMeBuyIt MCP. OAuth 2.1 + PKCE on first use. Do not put an API key in this file."
     }
   }
 }

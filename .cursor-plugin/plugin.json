@@ -1,8 +1,8 @@
 {
   "name": "lemmebuyit",
   "displayName": "LemMeBuyIt",
-  "version": "1.0.0",
-  "description": "Search live product catalogs across 103 US retailers, compare prices, look up stock, and pull price history via LemMeBuyIt's hosted MCP server.",
+  "version": "1.1.0",
+  "description": "Search live US retailer catalogs, compare prices, check stock, find promotions, pull price history, and rank resale flips through LemMeBuyIt's hosted MCP.",
   "author": {
     "name": "LemMeBuyIt",
     "email": "admin@lemmebuyit.com"
